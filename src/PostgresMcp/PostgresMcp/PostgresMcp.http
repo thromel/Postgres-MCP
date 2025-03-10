@@ -1,0 +1,6 @@
+@PostgresMcp_HostAddress = http://localhost:5171
+
+GET {{PostgresMcp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

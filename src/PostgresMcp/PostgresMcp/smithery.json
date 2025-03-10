@@ -1,0 +1,43 @@
+{
+  "name": "postgres-mcp",
+  "displayName": "PostgreSQL MCP",
+  "description": "An MCP server for PostgreSQL databases",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "license": "MIT",
+  "server": {
+    "type": "http",
+    "entrypoint": "dotnet run",
+    "cwd": ".",
+    "port": 5171
+  },
+  "tools": [
+    {
+      "name": "executeQuery",
+      "description": "Execute a read-only SQL query against a PostgreSQL database",
+      "parameters": {
+        "query": {
+          "type": "string",
+          "description": "The SQL query to execute (SELECT statements only)"
+        },
+        "connectionString": {
+          "type": "string",
+          "description": "The PostgreSQL connection string"
+        }
+      },
+      "returns": {
+        "type": "object",
+        "properties": {
+          "columns": {
+            "type": "array",
+            "description": "The columns in the result set"
+          },
+          "rows": {
+            "type": "array",
+            "description": "The rows in the result set"
+          }
+        }
+      }
+    }
+  ]
+} 

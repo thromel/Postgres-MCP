@@ -1,0 +1,51 @@
+# .NET build output
+bin/
+obj/
+build/
+.vs/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio cache/options
+.vs/
+*.cache
+*.[Cc]ache
+
+# Local configuration files
+appsettings.*.json
+!appsettings.Development.json
+local.settings.json
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# User secrets
+*.usersecrets.json
+
+# Connection string files
+*.config.json
+
+# Temporary test files
+test-*.json
+!test-*.http 

@@ -1,0 +1,26 @@
+{
+  "name": "postgres-mcp",
+  "version": "1.0.0",
+  "description": "PostgreSQL MCP server for Claude and other LLMs",
+  "bin": {
+    "postgres-mcp": "./install.js"
+  },
+  "main": "install.js",
+  "scripts": {
+    "start": "dotnet run",
+    "build": "dotnet build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mcp",
+    "claude",
+    "postgresql",
+    "ai",
+    "llm"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^11.1.1"
+  }
+} 

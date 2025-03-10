@@ -1,0 +1,41 @@
+### Test PostgreSQL MCP Server
+POST https://localhost:7193/mcp
+Content-Type: application/json
+
+{
+  "id": "test-query-1",
+  "jsonrpc": "2.0",
+  "method": "executeQuery",
+  "params": {
+    "query": "SELECT current_date, current_timestamp, version() LIMIT 1",
+    "connectionString": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=YourPasswordHere;"
+  }
+}
+
+### Test with another query
+POST https://localhost:7193/mcp
+Content-Type: application/json
+
+{
+  "id": "test-query-2",
+  "jsonrpc": "2.0",
+  "method": "executeQuery",
+  "params": {
+    "query": "SELECT table_name, table_schema FROM information_schema.tables WHERE table_schema NOT IN ('pg_catalog', 'information_schema') LIMIT 10",
+    "connectionString": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=YourPasswordHere;"
+  }
+}
+
+### Test with invalid query (should fail)
+POST https://localhost:7193/mcp
+Content-Type: application/json
+
+{
+  "id": "test-query-3",
+  "jsonrpc": "2.0",
+  "method": "executeQuery",
+  "params": {
+    "query": "DROP TABLE IF EXISTS users",
+    "connectionString": "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=YourPasswordHere;"
+  }
+} 
